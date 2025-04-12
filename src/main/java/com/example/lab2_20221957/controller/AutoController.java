@@ -22,9 +22,9 @@ public class AutoController {
 
     @GetMapping("/list")
     public String listarAutos(Model model) {
-        List<Auto> jugadorList = autoRepositorio.findAll();
-        model.addAttribute("listaJugadores",jugadorList);
-        return "jugadores/listaJugadores";
+        List<Auto> autoList = autoRepositorio.findAll();
+        model.addAttribute("listaAutos",autoList);
+        return "autos/listaAutos";
     }
 
 }
